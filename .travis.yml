@@ -1,0 +1,10 @@
+language: csharp
+solution: ArborCache.sln
+mono: none
+dotnet: 3.1.108
+install:
+  - nuget restore TestingUnits
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
+script:
+  - dotnet restore
+  - dotnet test
